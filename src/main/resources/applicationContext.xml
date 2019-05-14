@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="helloSpring"  class="entity.HelloSpring">
+        <meta key="name" value="john"/>
+    </bean>
+
+    <bean id="getBeanTest" class="lookup.GetBeanTest">
+        <lookup-method name="getBean" bean="student"/>
+    </bean>
+
+    <bean id="teacher" class="entity.Teacher"></bean>
+    <bean id="student" class="entity.Student"></bean>
+
+</beans>
