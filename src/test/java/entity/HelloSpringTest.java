@@ -3,6 +3,7 @@ package entity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,5 +21,12 @@ public class HelloSpringTest {
 
         BeanDefinition beanDefinition = context.getBeanFactory().getBeanDefinition("helloSpring");
         System.out.println(beanDefinition.getAttribute("name"));
+    }
+
+    @Test
+    public void testMethodReplaced(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        TestChangeMethod testChangeMethod = context.getBean("testChangeMethod",TestChangeMethod.class);
+        testChangeMethod.changeMe();
     }
 }

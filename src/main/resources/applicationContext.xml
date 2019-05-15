@@ -7,11 +7,17 @@
         <meta key="name" value="john"/>
     </bean>
 
-    <bean id="getBeanTest" class="lookup.GetBeanTest">
+    <bean id="getBeanTest" class="bean.lookup.GetBeanTest">
         <lookup-method name="getBean" bean="student"/>
     </bean>
 
     <bean id="teacher" class="entity.Teacher"></bean>
     <bean id="student" class="entity.Student"></bean>
+
+    <bean id="testChangeMethod" class="entity.TestChangeMethod">
+        <replaced-method name="changeMe" replacer="replacer"></replaced-method>
+    </bean>
+
+    <bean id="replacer" class="bean.replacer.TestMethodReplacer"></bean>
 
 </beans>

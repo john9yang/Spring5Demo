@@ -1,4 +1,4 @@
-package lookup;
+package bean.lookup;
 
 import entity.User;
 
