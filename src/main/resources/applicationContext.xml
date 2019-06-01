@@ -3,9 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="helloSpring"  class="entity.HelloSpring">
+    <bean name="helloSpring"  class="entity.HelloSpring" init-method="init" destroy-method="over">
         <meta key="name" value="john"/>
     </bean>
+
+    <bean name="helloSpringBeanPostProcessor" class="bean.postprocessor.HelloSpringBeanPostProcessor"></bean>
 
     <bean id="getBeanTest" class="bean.lookup.GetBeanTest">
         <lookup-method name="getBean" bean="student"/>
@@ -20,4 +22,5 @@
 
     <bean id="replacer" class="bean.replacer.TestMethodReplacer"></bean>
 
+    <bean name="awareBean" class="bean.aware.AwareBean"></bean>
 </beans>
