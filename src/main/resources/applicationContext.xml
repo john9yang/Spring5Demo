@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       >
 
     <bean name="helloSpring"  class="entity.HelloSpring" init-method="init" destroy-method="over">
+        <property name="value" value="test"></property>
         <meta key="name" value="john"/>
     </bean>
 
@@ -23,4 +25,10 @@
     <bean id="replacer" class="bean.replacer.TestMethodReplacer"></bean>
 
     <bean name="awareBean" class="bean.aware.AwareBean"></bean>
+
+    <bean name="car" class="bean.aware.Car" autowire="byType"></bean>
+
+    <bean name="wheel" class="bean.aware.Wheel"></bean>
+
+    <bean name="wheel2" class="bean.aware.Wheel2"></bean>
 </beans>

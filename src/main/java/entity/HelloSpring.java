@@ -4,6 +4,12 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 public class HelloSpring implements InitializingBean, DisposableBean {
+    private String value;
+
+    public HelloSpring(){
+        System.out.println("HelloSpring construct");
+    }
+
     public String sayHello(){
         return "Hello Spring";
     }
@@ -24,5 +30,14 @@ public class HelloSpring implements InitializingBean, DisposableBean {
 
     public void over(){
         System.out.println("Over");
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        System.out.println("HelloSpring setValue");
+        this.value = value;
     }
 }

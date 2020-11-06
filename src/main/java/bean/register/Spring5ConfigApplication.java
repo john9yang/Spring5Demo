@@ -1,5 +1,6 @@
 package bean.register;
 
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
@@ -22,7 +23,6 @@ public class Spring5ConfigApplication {
 //        return new BarService();
 //    }
 
-    @Bean
     ClientBean clientBean(){
         return new ClientBean();
     }
