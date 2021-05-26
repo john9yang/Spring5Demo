@@ -31,4 +31,7 @@
     <bean name="wheel" class="bean.aware.Wheel"></bean>
 
     <bean name="wheel2" class="bean.aware.Wheel2"></bean>
+
+    <bean name="yjh" class="entity.Student" scope="prototype"></bean>
+    <bean name="yjh2" class="entity.Student" scope="prototype"></bean>
 </beans>

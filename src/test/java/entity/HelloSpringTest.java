@@ -46,5 +46,8 @@ public class HelloSpringTest {
     @Test
     public void test(){
         System.out.println("twice test");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Student student = (Student) context.getBean("yjh");
+        student.showMe();
     }
 }
