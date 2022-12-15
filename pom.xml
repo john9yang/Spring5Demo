@@ -21,7 +21,7 @@
     </build>
 
     <properties>
-        <spring.version>5.0.0.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <reactor.version>3.1.8.RELEASE</reactor.version>
     </properties>
 
